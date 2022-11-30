@@ -1,12 +1,16 @@
 {% extends 'Capuchino/padre.html' %}
 {% load static %}
 
+{% block edit %}
+{% static 'Capuchino/css/styles_rest.css' %}
+{% endblock%}
+
 {% block pestaña %}
 Restaurants
 {% endblock %}
 
 {% block titulo %}
-<h1 style="color:blueviolet"> Restaurats </h1>
+<h1 style="color:blueviolet"> Restaurants </h1>
 {% endblock %}
 
 {% block contenido_2 %}
@@ -20,5 +24,5 @@ Restaurants
 
     <input type="submit" value="Guardar">
 </form>
-{{ mensaje }}
+<h4 style="color:green"> {{ mensaje }} </h4>
 {% endblock %}

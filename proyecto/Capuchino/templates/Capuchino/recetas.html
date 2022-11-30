@@ -1,12 +1,16 @@
 {% extends 'Capuchino/padre.html' %}
 {% load static %}
 
+{% block edit %}
+{% static 'Capuchino/css/styles_recetas.css' %}
+{% endblock%}
+
 {% block pestaña %}
 Recetas
 {% endblock %}
 
 {% block titulo %}
-<h1 style="color:blueviolet"> INICIO </h1>
+<h1 style="color:whitesmoke"> Recetario </h1>
 {% endblock %}
 
 {% block contenido_2 %}
@@ -20,5 +24,5 @@ Recetas
 
     <input type="submit" value="Guardar">
 </form>
-{{ mensaje }}
+<h4 style="color:green"> {{ mensaje }} </h4>
 {% endblock %}

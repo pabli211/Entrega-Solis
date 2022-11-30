@@ -1,13 +1,17 @@
 {% extends 'Capuchino/padre.html' %}
 {% load static %}
 
+{% block edit %}
+{% static 'Capuchino/css/styles_chefs.css' %}
+{% endblock%}
+
 
 {% block pestaña %}
 Chefs
 {% endblock %}
 
 {% block titulo %}
-<h1 style="color:blueviolet"> INICIO </h1>
+<h1 style="color:blueviolet"> Bienvenidos Chefs </h1>
 {% endblock %}
 
 {% block contenido_2 %}
@@ -22,5 +26,5 @@ Chefs
     <input type="submit" value="Guardar">
 </form>
 
-{{ mensaje }}
+<h4 style="color:green"> {{ mensaje }} </h4>
 {% endblock %}

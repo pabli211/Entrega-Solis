@@ -3,6 +3,7 @@ from .models import *
 from Capuchino.forms import *
 
 
+
 def inicio(request):
     return render(request, 'Capuchino/inicio.html')
 
@@ -39,7 +40,7 @@ def cheff(request):
 
             cheff= Cheff(nombre=nombre, apellido=apellido, email=email, restaurant=restaurant, especialidad=especialidad)
             cheff.save()
-            return render(request,'Capuchino/inicio.html', {'mensaje':'Cheff creado correctamente'})
+            return render(request,'Capuchino/inicio.html', {'mensaje':'Chef creado correctamente'})
     else:
         formulario= CheffForm()
     

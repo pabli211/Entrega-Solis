@@ -1,6 +1,11 @@
 {% extends 'Capuchino/padre.html' %}
 {% load static %}
 
+
+{% block edit %}
+{% static 'Capuchino/css/styles.css' %}
+{% endblock%}
+
 {% block pestaña %}
 Inicio
 {% endblock %}
@@ -13,5 +18,6 @@ Inicio
 {% block contenido_2 %}
 <h1 style='background-color:#03baa7;' align="center">Bienvenido a mi proyecto</h1>
 
-{{ mensaje }}
+<h4 style="color:green"> {{ mensaje }} </h4>
+
 {% endblock %}
