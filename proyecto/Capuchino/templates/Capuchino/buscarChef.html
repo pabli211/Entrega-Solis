@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block edit %}
-{% static 'Capuchino/css/styles_recetas.css' %}
+{% static 'Capuchino/css/styles_chefs.css' %}
 {% endblock%}
 
 {% block pestaña %}
@@ -10,13 +10,13 @@ Buscar
 {% endblock %}
 
 {% block titulo %}
-<h1> Busqueda de receta </h1>
+<h1> Busqueda de Chefs </h1>
 {% endblock %}
 
 {% block contenido_2 %}
 <h2>BUSCAR: </h2>
 
-<form action="{% url 'buscar_receta' %}" method="GET"> {% csrf_token %}
+<form action="{% url 'buscar_chef' %}" method="GET"> {% csrf_token %}
     <input type="text" name="nombre" id="nombre">
     
     <input type="submit" value="buscar">

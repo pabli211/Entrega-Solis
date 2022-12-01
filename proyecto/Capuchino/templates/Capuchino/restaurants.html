@@ -14,7 +14,7 @@ Restaurants
 {% endblock %}
 
 {% block contenido_2 %}
-<h2 style='background-color:#00ffe5;'align="center">¿Desea inscribir su restaurant en nuestra WEB?</h2>
+<h2 style='background-color:#1778d2;'align="center">¿Desea inscribir su restaurant en nuestra WEB?</h2>
 <h3>Hagalo aqui:</h3>
 <form action="{% url 'restaurant' %}" method="POST"> {% csrf_token %}
 
@@ -24,5 +24,10 @@ Restaurants
 
     <input type="submit" value="Guardar">
 </form>
-<h4 style="color:green"> {{ mensaje }} </h4>
+<br>
+<hr>
+<a class="btn btn-primary" href={% url 'buscarRest' %} >Buscar restaurat</a>
+<br>
+<hr>
+<br>
 {% endblock %}

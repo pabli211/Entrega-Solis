@@ -3029,9 +3029,24 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  color: rgb(255, 255, 255);
+  background-color: #e77314;
+  border-color: #ffffff;
+  
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 30px;
+  border-width: 2.7px;
+
+
+  padding: 14px 20px;
+  font-size: 18px;
+  font-family:fantasy, var(--bs-light);
+
+  display: inline-block;
+  display: block;
+  margin-right: 0px;
+  margin-left: 0px;
 }
 .btn-primary:hover {
   color: #fff;

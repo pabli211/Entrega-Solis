@@ -1,0 +1,33 @@
+{% extends 'Capuchino/padre.html' %}
+{% load static %}
+
+{% block edit %}
+{% static 'Capuchino/css/styles_usuarios.css' %}
+{% endblock%}
+
+{% block pestaña %}
+Resultado busqueda
+{% endblock %}
+
+{% block titulo %}
+<h1> RESULTADOS </h1>
+{% endblock %}
+
+{% block contenido_2 %}
+<h2 style="color:blue"> Resultado de la busqueda: </h2>
+<ul>
+    {% if clientes %}
+       
+        {% for cliente in clientes %}
+            <hr>
+            <li> <u>Nombre</u>: {{ cliente.nombre }} {{ cliente.apellido }}</li>
+            <li> <u>Reseña</u>: {{ cliente.reseña }}</li>
+            <hr>
+        {% endfor %}
+    
+        {% else %}
+        <h3 style="color:red">No hay usuarios con ese nombre</h3>
+
+    {% endif %}
+</ul>
+{% endblock %}

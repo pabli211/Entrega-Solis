@@ -92,7 +92,66 @@ def busquedaReceta(request):
 
         nombre= request.GET["nombre"]
         receta= Receta.objects.filter(nombre__icontains=nombre)
-        return render(request, 'Capuchino/resultadoBusqueda.html', {'receta':receta})
+        return render(request, 'Capuchino/resultadoReceta.html', {'receta':receta})
 
     else:
-        return render(request, 'Capuchino/buscarReceta.html', {'mensaje_2':'por favor ingrese una comisión'})
+        return render(request, 'Capuchino/buscarReceta.html', {'mensaje_2':'por favor ingrese una receta'})
+
+
+
+
+
+def buscarRest(request):
+    return render(request, 'Capuchino/buscarRest.html')
+
+def busquedaRest(request):
+
+    if request.GET["pepito"]:
+
+        nombre= request.GET["pepito"]
+        rest= Restaurant.objects.filter(nombre__icontains=nombre)
+        return render(request, 'Capuchino/resultadoRest.html', {'rest':rest})
+
+    else:
+        return render(request, 'Capuchino/buscarRest.html', {'mensaje_2':'por favor ingrese un restaurant'})
+
+
+
+
+
+
+def buscarChef(request):
+    return render(request, 'Capuchino/buscarChef.html')
+
+
+def busquedaChef(request):
+
+    if request.GET["nombre"]:
+
+        nombre= request.GET["nombre"]
+        chefs= Cheff.objects.filter(nombre__icontains=nombre)
+        return render(request, 'Capuchino/resultadoChef.html', {'chefs':chefs})
+
+    else:
+        return render(request, 'Capuchino/buscarChef.html', {'mensaje_2':'por favor ingrese un Chef'})
+
+
+
+
+
+
+
+def buscarCliente(request):
+    return render(request, 'Capuchino/buscarCliente.html')
+
+
+def busquedaCliente(request):
+
+    if request.GET["nombre"]:
+
+        nombre= request.GET["nombre"]
+        cliente= Cliente.objects.filter(nombre__icontains=nombre)
+        return render(request, 'Capuchino/resultadoCliente.html', {'clientes':cliente})
+
+    else:
+        return render(request, 'Capuchino/buscarCliente.html', {'mensaje_2':'por favor ingrese un usuario'})

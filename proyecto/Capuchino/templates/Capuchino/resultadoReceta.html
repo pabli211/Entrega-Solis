@@ -10,20 +10,25 @@ Resultado busqueda
 {% endblock %}
 
 {% block titulo %}
+<h1> RESULTADOS </h1>
+{% endblock %}
+
+{% block contenido_2 %}
 <h2 style="color:blue"> Resultado de la busqueda: </h2>
 <ul>
     {% if receta %}
+        
         {% for recetas in receta %}
-    
-            <li> Nombre: {{ recetas.nombre }}</li><p> - </p><li> Dificultad: {{ recetas.dificultad }}</li>
-            <li> Pasos: {{ recetas.pasos }}</li>
-
+            <hr>
+            <li> <u>Nombre:</u>: {{ recetas.nombre }}</li>
+            <li> <u>Dificultad</u>: {{ recetas.dificultad }}</li>
+            <li> <u>Pasos</u>: {{ recetas.pasos }}</li>
             <hr>
 
         {% endfor %}
     
         {% else %}
-    <h3 style="color:red">No hay recetas con ese nombre</h3>
+        <h3 style="color:red">No hay recetas con ese nombre</h3>
 
     {% endif %}
 </ul>

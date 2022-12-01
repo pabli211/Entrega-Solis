@@ -15,7 +15,7 @@ Chefs
 {% endblock %}
 
 {% block contenido_2 %}
-<h2 style='background-color:#03baa7;' align="center">¿Eres Cheff?</h2>
+<h2 style='background-color:#1778d2;' align="center">¿Eres Cheff?</h2>
 <h3>Registrate aqui:</h3>
 <form action="{% url 'cheff' %}" method="POST"> {% csrf_token %}
 
@@ -25,6 +25,12 @@ Chefs
 
     <input type="submit" value="Guardar">
 </form>
+<br>
+<hr>
+<a class="btn btn-primary" href={% url 'buscarChef' %} >Buscar Chef</a>
+<br>
+<hr>
+<br>
 
-<h4 style="color:green"> {{ mensaje }} </h4>
+
 {% endblock %}
