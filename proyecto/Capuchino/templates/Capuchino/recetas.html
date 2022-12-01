@@ -13,9 +13,13 @@ Recetas
 <h1 style="color:whitesmoke"> <u>RECETARIO</u></h1>
 {% endblock %}
 
-{% block contenido_2 %}
+{% block contenido_3 %}
 <h2 style='background-color:#1778d2;' align="center">¿Quieres compartir tu receta?</h2>
-<h3>Hazlo aqui:</h3>
+{% endblock %}
+
+
+{% block contenido_2 %}
+<h2>HAZLO AQUI:</h3>
 <form action="{% url 'receta' %}" method="POST"> {% csrf_token %}
 
     <table>

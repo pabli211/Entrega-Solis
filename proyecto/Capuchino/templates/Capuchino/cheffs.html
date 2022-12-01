@@ -11,12 +11,16 @@ Chefs
 {% endblock %}
 
 {% block titulo %}
-<h1> <u>BIENVENIDOS <br> CHEFS</u> </h1>
+<h1> <u>BIENVENIDOS CHEFS</u> </h1>
+{% endblock %}
+
+{% block contenido_3 %}
+<h2 style='background-color:#1778d2;' align="center">¿Eres Cheff?</h2>
 {% endblock %}
 
 {% block contenido_2 %}
-<h2 style='background-color:#1778d2;' align="center">¿Eres Cheff?</h2>
-<h3>Registrate aqui:</h3>
+
+<h3>REGISTRATE AQUI:</h3>
 <form action="{% url 'cheff' %}" method="POST"> {% csrf_token %}
 
     <table>

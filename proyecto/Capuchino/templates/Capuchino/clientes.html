@@ -13,9 +13,12 @@ Clientes
 <h1> <u>BIENVENIDOS CLIENTES</u> </h1>
 {% endblock %}
 
-{% block contenido_2 %}
+{% block contenido_3 %}
 <h2 style='background-color:#1778d2;' align="center">¿Quieres contarnos sobre tu experiencia?</h2>
-<h3>Hazlo aqui:</h3>
+{% endblock %}
+
+{% block contenido_2 %}
+<h3>HAZLO AQUI:</h3>
 <form action="{% url 'cliente' %}" method="POST"> {% csrf_token %}
 
     <table>
