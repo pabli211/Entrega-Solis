@@ -10,11 +10,11 @@ Restaurants
 {% endblock %}
 
 {% block titulo %}
-<h1 style="color:blueviolet"> Restaurants </h1>
+<h1> <u>RESTAURANTS</u> </h1>
 {% endblock %}
 
 {% block contenido_2 %}
-<h2 style='background-color:#03baa7;'>¿Desea inscribir su restaurant en nuestra WEB?</h2>
+<h2 style='background-color:#00ffe5;'align="center">¿Desea inscribir su restaurant en nuestra WEB?</h2>
 <h3>Hagalo aqui:</h3>
 <form action="{% url 'restaurant' %}" method="POST"> {% csrf_token %}
 

@@ -82,3 +82,17 @@ def receta(request):
     
     return render(request, 'Capuchino/recetas.html', {"form":formulario},)
 
+def buscarReceta(request):
+    return render(request, 'Capuchino/buscarReceta.html')
+
+
+def busquedaReceta(request):
+
+    if request.GET["nombre"]:
+
+        nombre= request.GET["nombre"]
+        receta= Receta.objects.filter(nombre__icontains=nombre)
+        return render(request, 'Capuchino/resultadoBusqueda.html', {'receta':receta})
+
+    else:
+        return render(request, 'Capuchino/buscarReceta.html', {'mensaje_2':'por favor ingrese una comisión'})

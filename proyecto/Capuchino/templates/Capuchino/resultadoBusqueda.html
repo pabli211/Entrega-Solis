@@ -1,0 +1,30 @@
+{% extends 'Capuchino/padre.html' %}
+{% load static %}
+
+{% block edit %}
+{% static 'Capuchino/css/styles_recetas.css' %}
+{% endblock%}
+
+{% block pestaña %}
+Resultado busqueda
+{% endblock %}
+
+{% block titulo %}
+<h2 style="color:blue"> Resultado de la busqueda: </h2>
+<ul>
+    {% if receta %}
+        {% for recetas in receta %}
+    
+            <li> Nombre: {{ recetas.nombre }}</li><p> - </p><li> Dificultad: {{ recetas.dificultad }}</li>
+            <li> Pasos: {{ recetas.pasos }}</li>
+
+            <hr>
+
+        {% endfor %}
+    
+        {% else %}
+    <h3 style="color:red">No hay recetas con ese nombre</h3>
+
+    {% endif %}
+</ul>
+{% endblock %}
