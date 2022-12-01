@@ -20,9 +20,11 @@ Recetas
 
 {% block contenido_2 %}
 <h2>HAZLO AQUI:</h3>
+<hr>
+<br>
 <form action="{% url 'receta' %}" method="POST"> {% csrf_token %}
 
-    <table>
+    <table class="table borderless" style="color:white">
         {{ form.as_table }}
     </table>
 

@@ -19,9 +19,11 @@ Clientes
 
 {% block contenido_2 %}
 <h3>HAZLO AQUI:</h3>
+<hr>
+<br>
 <form action="{% url 'cliente' %}" method="POST"> {% csrf_token %}
 
-    <table>
+    <table class="table borderless" style="color:white">
         {{ form.as_table }}
     </table>
 

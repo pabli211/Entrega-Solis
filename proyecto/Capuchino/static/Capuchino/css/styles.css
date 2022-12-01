@@ -303,7 +303,9 @@ svg {
 
 table {
   caption-side: bottom;
-  border-collapse: collapse;
+  border-collapse: inherit;
+  border-spacing: 10px;
+  border: 1px solid white;
 }
 
 caption {
@@ -349,6 +351,7 @@ input[type=button], input[type=submit], input[type=reset] {
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
+  border-radius: 20px;
 }
 
 button,
@@ -3084,13 +3087,11 @@ textarea.form-control-lg {
 
 .btn-secondary {
   color: #fff;
-  background-color: #6c757d;
-  border-color: #6c757d;
+  
 }
 .btn-secondary:hover {
-  color: #fff;
-  background-color: #5c636a;
-  border-color: #565e64;
+  color: rgb(0, 0, 0);
+
 }
 .btn-check:focus + .btn-secondary, .btn-secondary:focus {
   color: #fff;
@@ -5517,6 +5518,7 @@ textarea.form-control-lg {
   margin: 0.5rem;
   pointer-events: none;
 }
+
 .modal.fade .modal-dialog {
   transition: transform 0.3s ease-out;
   transform: translate(0, -50px);

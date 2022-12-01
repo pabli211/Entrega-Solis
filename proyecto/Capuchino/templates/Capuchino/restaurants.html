@@ -21,9 +21,11 @@ Restaurants
 {% block contenido_2 %}
 
 <h3>HAGALO AQUI:</h3>
+<hr>
+<br>
 <form action="{% url 'restaurant' %}" method="POST"> {% csrf_token %}
 
-    <table>
+    <table class="table borderless" style="color:white">
         {{ form.as_table }}
     </table>
 
