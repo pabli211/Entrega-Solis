@@ -25,7 +25,7 @@ Listado Rest
         <li> <u>Nombre</u>: {{ rest.nombre }} || <u>Direccion</u>: {{ rest.direccion }} </li>
         <br>
         <a class='btn btn-danger' href={% url 'eliminarRest' rest.id %}>Eliminar</a>
-        <a class='btn btn-succes' href={% url 'editarRest' rest.id %}>Editar</a>        
+        <a class='btn btn-success' href={% url 'editarRest' rest.id %}>Editar</a>        
     {% endfor %}
    
 
