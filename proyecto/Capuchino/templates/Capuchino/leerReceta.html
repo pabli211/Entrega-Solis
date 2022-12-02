@@ -25,6 +25,7 @@ Listado Recetas
         <li> <u>Nombre</u>: {{ receta.nombre }} || <u>Dificultad</u>: {{ receta.dificultad }}</li>
         <br>
         <a class='btn btn-danger' href={% url 'eliminarReceta' receta.id %}>Eliminar</a>
+        <a class='btn btn-succes' href={% url 'editarReceta' receta.id %}>Editar</a>
         
     {% endfor %}
    

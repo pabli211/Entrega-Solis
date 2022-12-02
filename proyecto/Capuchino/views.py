@@ -38,7 +38,7 @@ def busquedaReceta(request):
 
         nombre= request.GET["nombre"]
         receta= Receta.objects.filter(nombre__icontains=nombre)
-        return render(request, 'Capuchino/resultadoReceta.html', {'receta':receta})
+        return render(request, 'Capuchino/resultadoReceta.html', {'recetas':receta})
 
     else:
         return render(request, 'Capuchino/buscarReceta.html', {'mensaje_2':'por favor ingrese una receta'})
@@ -53,6 +53,23 @@ def eliminarReceta(request, id):
 
     receta= Receta.objects.all()
     return render(request, 'Capuchino/leerReceta.html', {'mensaje':'Receta eliminado correctamente', 'recetas':receta})
+
+def editarReceta(request, id):
+    receta= Receta.objects.get(id=id)
+    if request.method=='POST':
+        form= RecetaForm(request.POST)
+        if form.is_valid():
+            informacion= form.cleaned_data
+            receta.nombre= informacion['nombre']
+            receta.dificultad= informacion['dificultad']
+            receta.pasos= informacion['pasos']
+            receta.save()
+            receta= Receta.objects.all()
+            return render(request, 'Capuchino/leerReceta.html', {'mensaje':'Receta editada correctamente', 'recetas':receta})
+            
+    else:
+        formulario= RecetaForm(initial={'nombre':receta.nombre , 'dificultad':receta.dificultad, 'pasos':receta.pasos})
+    return render(request, 'Capuchino/editarReceta.html', {'form':formulario, 'recetas':receta})
 
 #------------------------Bloque Cheff
 
@@ -166,6 +183,23 @@ def eliminarRest(request, id):
     rest= Restaurant.objects.all()
     return render(request, 'Capuchino/leerRest.html', {'mensaje':'Restaurant eliminado correctamente', 'rests':rest})
 
+def editarRest(request, id):
+    rest= Restaurant.objects.get(id=id)
+    if request.method=='POST':
+        form= RestaurantForm(request.POST)
+        if form.is_valid():
+            informacion= form.cleaned_data
+            rest.nombre= informacion['nombre']
+            rest.direccion= informacion['direccion']
+            rest.estrellas= informacion['estrellas']           
+            rest.save()
+            rest= Restaurant.objects.all()
+            return render(request, 'Capuchino/leerRest.html', {'mensaje':'Restaurant editado correctamente', 'rests':rest})
+            
+    else:
+        formulario= RestaurantForm(initial={'nombre':rest.nombre , 'direccion':rest.direccion, 'estrellas':rest.estrellas})
+    return render(request, 'Capuchino/editarRest.html', {'form':formulario, 'rests':rest})
+
 #------------------------Bloque Clientes
 
 def cliente(request):
@@ -211,3 +245,21 @@ def eliminarCliente(request, id):
 
     cliente= Cliente.objects.all()
     return render(request, 'Capuchino/leerCliente.html', {'mensaje':'Cliente eliminado correctamente', 'clientes':cliente})
+
+def editarCliente(request, id):
+    cliente= Cliente.objects.get(id=id)
+    if request.method=='POST':
+        form= ClienteForm(request.POST)
+        if form.is_valid():
+            informacion= form.cleaned_data
+            cliente.nombre= informacion['nombre']
+            cliente.apellido= informacion['apellido']
+            cliente.email= informacion['email']
+            cliente.reseña= informacion['reseña']     
+            cliente.save()
+            cliente= Cliente.objects.all()
+            return render(request, 'Capuchino/leerCliente.html', {'mensaje':'Cliente editado correctamente', 'clientes':cliente})
+            
+    else:
+        formulario= ClienteForm(initial={'nombre':cliente.nombre , 'apellido':cliente.apellido, 'email':cliente.email, 'reseña':cliente.reseña})
+    return render(request, 'Capuchino/editarCliente.html', {'form':formulario, 'clientes':cliente})

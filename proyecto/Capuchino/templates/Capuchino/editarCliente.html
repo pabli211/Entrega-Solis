@@ -2,17 +2,17 @@
 {% load static %}
 
 {% block edit %}
-{% static 'Capuchino/css/styles_chefs.css' %}
+{% static 'Capuchino/css/styles_usuarios.css' %}
 {% endblock%}
 
 
 {% block pestaña %}
-Edicion_chef
+Edicion_cliente
 {% endblock %}
 
 {% block titulo %}
-<h1><u>EDITANDO CHEF:</u></h1>
-<h3>{{ chefs.nombre }} {{ chefs.apellido }}</h3>
+<h1><u>EDITANDO CLIENTE:</u></h1>
+<h3>{{ clientes.nombre }} {{ clientes.apellido }}</h3>
 
 
 {% endblock %}
@@ -26,7 +26,7 @@ Edicion_chef
 <h3>EDITAR:</h3>
 <hr>
 <br>
-<form action="{% url 'editarChef' chefs.id  %}" method="POST"> {% csrf_token %}
+<form action="{% url 'editarCliente' clientes.id  %}" method="POST"> {% csrf_token %}
 
     <table class="table borderless" style="color:white">
         <h2 style="color:white">{{ form.as_table }}</h2>

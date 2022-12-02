@@ -18,9 +18,9 @@ Resultado busqueda
 {% block contenido_2 %}
 <h2 style="color:white"> Resultado de la busqueda: </h2>
 <ul>
-    {% if rest %}
+    {% if rests %}
        
-        {% for restaurant in rest %}
+        {% for restaurant in rests %}
             <hr>
             
             <li> <u>Nombre</u>: {{ restaurant.nombre }}</li>

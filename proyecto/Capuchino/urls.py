@@ -10,6 +10,7 @@ urlpatterns = [
     path('busqueda-receta/', busquedaReceta, name='buscar_receta'),
     path('leerReceta/', leerReceta, name='leerReceta'),
     path('eliminarReceta/<id>', eliminarReceta, name='eliminarReceta'),
+    path('editarReceta/<id>', editarReceta, name='editarReceta'),
 
 
     #----------------------Cheff:
@@ -27,6 +28,7 @@ urlpatterns = [
     path('busqueda-cliente/', busquedaCliente, name='buscar_cliente'),
     path('leerCliente/', leerCliente, name='leerCliente'),
     path('eliminarCliente/<id>', eliminarCliente, name='eliminarCliente'),
+    path('editarCliente/<id>', editarCliente, name='editarCliente'),
 
 
     #---------------------Restaurants:   
@@ -35,5 +37,6 @@ urlpatterns = [
     path('busqueda-restaurant/', busquedaRest, name='buscar_rest'),
     path('leerRestaurant/', leerRest, name='leerRest'),
     path('eliminarRestaurant/<id>', eliminarRest, name='eliminarRest'),
+    path('editarRestaurant/<id>', editarRest, name='editarRest'),
 
 ]

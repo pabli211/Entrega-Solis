@@ -18,13 +18,13 @@ Resultado busqueda
 {% block contenido_2 %}
 <h2 style="color:rgb(255, 255, 255)"> Resultado de la busqueda: </h2>
 <ul>
-    {% if receta %}
+    {% if recetas %}
         
-        {% for recetas in receta %}
+        {% for receta in recetas %}
             <hr>
-            <li> <u>Nombre:</u>: {{ recetas.nombre }}</li>
-            <li> <u>Dificultad</u>: {{ recetas.dificultad }}</li>
-            <li> <u>Pasos</u>: {{ recetas.pasos }}</li>
+            <li> <u>Nombre:</u>: {{ receta.nombre }}</li>
+            <li> <u>Dificultad</u>: {{ receta.dificultad }}</li>
+            <li> <u>Pasos</u>: {{ receta.pasos }}</li>
             <hr>
 
         {% endfor %}
