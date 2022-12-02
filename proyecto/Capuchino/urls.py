@@ -39,4 +39,5 @@ urlpatterns = [
     path('eliminarRestaurant/<id>', eliminarRest, name='eliminarRest'),
     path('editarRestaurant/<id>', editarRest, name='editarRest'),
 
+    path('editarBase/', editarBase, name='editarBase'),
 ]

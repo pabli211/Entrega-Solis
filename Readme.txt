@@ -60,8 +60,20 @@ La aplicaión cuenta con la seguiente estructura:
                 'editarReceta.html', posee vista ----- url:'editarReceta/<id>'---- elimina elemento de la base de datos por id
                 'resultadoReceta.html', posee vista ----- url:'eliminarReceta/<id>'---- edita datos guarados en la base de datos por id
 
+                A todos estos templates podemos acceder desde el hipervinculo que encontramos en 'http://localhost:8000/Capuchino/inicio'
+            el cual nos enviará al template 'editarBase.html' donde en el encontraremos una serie de botones para acceder a botones que nos redigirán
+            en base a la 'class' que seleccionemos a cada vista de la base de datos para su posterior modificación
+
 
     Se puede ingresar bajo las credenciales {'usuario': coder ; 'contraseña':house} a la url 'http://localhost:8000/admin' a la visualización que la vista
 que nos brinda Django como un 'superuser'. En ella podremos modificar datos de la base, eliminarlos, añadirlo y otras funciones aun no exploradas.
 
+
+
+
+                                                --------------- ACLARACIÒN ------------------
+
+recomiendo recorrer la pàgina desde lo que yo considero que es la vista principal (inicio) del proyecto la cual podremos acceder desde 'http://localhost:8000/Capuchino/inicio'
+
+PD: cabe aclarar que localhost:8000 puede ser variable en otras PC's
  

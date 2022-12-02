@@ -7,6 +7,9 @@ from Capuchino.forms import *
 def inicio(request):
     return render(request, 'Capuchino/inicio.html')
 
+def editarBase(request):
+    return render(request, 'Capuchino/editarBase.html')
+
 
 
 #------------------------Bloque Recetas
@@ -263,3 +266,6 @@ def editarCliente(request, id):
     else:
         formulario= ClienteForm(initial={'nombre':cliente.nombre , 'apellido':cliente.apellido, 'email':cliente.email, 'reseña':cliente.reseña})
     return render(request, 'Capuchino/editarCliente.html', {'form':formulario, 'clientes':cliente})
+
+
+
